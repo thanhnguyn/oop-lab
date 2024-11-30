@@ -1,0 +1,23 @@
+1. Create an ArrayList of Media, then add some media (CD, DVD, or Book) into the list. Iterate through the list and print out the information of the media by using the toString() method. Observe what happens and explain in detail.
+Answer:  Khi g?i phýõng th?c toString() trên danh sách Media, m?i ð?i tý?ng trong danh sách s? g?i phýõng th?c toString() c?a l?p týõng ?ng c?a nó. Ði?u này minh h?a tính ða h?nh: cùng m?t phýõng th?c ðý?c g?i nhýng hành vi th?c hi?n ph? thu?c vào ð?i tý?ng th?c t? (CD, DVD, ho?c Book).
+
+2. What class should implement the Comparable interface?
+Answer: L?p Media
+
+3. Can we have two ordering rules of the item (by title then cost, and by cost then title) if we use this Comparable interface approach?
+Answer: Không th? có hai quy t?c s?p x?p khác nhau cùng lúc v?i Comparable v? compareTo() ch? có m?t cách tri?n khai duy nh?t. Ð? có nhi?u cách s?p x?p, c?n s? d?ng Comparator.
+
+4. Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+Answer: T?o m?t Comparator riêng cho DigitalVideoDisc
+
+5. Which classes are aggregates of other classes? Check all constructors of whole classes to see if they initialize their parts.
+Answer: L?p CompactDisc là aggregate c?a Track (danh sách các Track).
+L?p Cart là aggregate c?a Media (danh sách các Media).
+Constructor c?a CompactDisc và Cart kh?i t?o ArrayList ð? ch?a các ph?n t? này.
+
+6. How can you ensure that the list of media in the cart or the list of tracks in a CD does not contain identical objects?
+Answer: Override phýõng th?c equals() trong l?p Media và Track
+
+7. How can you filter and sort the media items in the cart? Compare using the Comparator and Comparable approaches.
+Answer: L?c: S? d?ng v?ng l?p ð? ki?m tra ði?u ki?n (id ho?c title).
+S?p x?p: S? d?ng Comparator ho?c Comparable
